@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invite ❤️</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #noButton {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Will you be my Valentine? 💖</h1>
+        <button onclick="respond('yes')">Yes 😍</button>
+        <button id="noButton" onmouseover="runAway()" onclick="respond('no')">No 😢</button>
+        <p id="response"></p>
+    </div>
+
+    <script>
+        let runCount = 0;
+        function respond(answer) {
+            let message = answer === 'yes' ? "Yay! Can't wait! 🎉" : "Oh no... maybe next time? 😢";
+            document.getElementById('response').innerText = message;
+        }
+
+        function runAway() {
+            if (runCount < 10) {
+                let button = document.getElementById("noButton");
+                let x = Math.random() * (window.innerWidth - 100);
+                let y = Math.random() * (window.innerHeight - 50);
+                button.style.left = `${x}px`;
+                button.style.top = `${y}px`;
+                runCount++;
+            }
+        }
+    </script>
+</body>
+</html>

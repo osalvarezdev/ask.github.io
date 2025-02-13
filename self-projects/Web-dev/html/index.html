@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Invitation</title>
+  <link rel="stylesheet" href="/Web-dev/css/style.css">
+  
+</head>
+<body>
+    <script src="/Web-dev/js/script.js"></script>
+    <div class="container">
+        <!-- Add content here -->
+        <div class="questions">
+            <h1>Will you be my Valentine?</h1>
+        </div>
+        <img class="cinnamon" src="/Web-dev/files/images/waiting-cnmn.gif" alt="Cinnamoroll">
+        <div class="yes">
+            <button id="yesButton" onclick="respond('yes'); change('/Web-dev/files/images/happy-cnmn.gif')" class="yesselect">
+  <span class="text">Yes</span>
+  <span class="icon"
+    ><svg
+      viewBox="0 0 24 24"
+      height="24"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    ></svg><span class="buttonSpan">Really?</span></span>
+</button>
+
+        </div>
+
+
+        <div class="no">
+<button id="noButton" class="noselect" onmouseover="runAway()" onclick="respond('no'); change('/Web-dev/files/images/sad.gif')"><span class="text">No</span>
+    <span class="icon"
+      ><svg
+        viewBox="0 0 24 24"
+        height="24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      ></svg><span class="nobuttonSpan">Awww... Next time I guess</span></span>
+        </div>
+        <p id="response"></p>
+    </div>
+</body>
+</html>
