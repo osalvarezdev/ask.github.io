@@ -1,0 +1,218 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ffdde1, #ee9ca7);
+            font-family: "Poppins", sans-serif;
+        }
+        .container {
+            width: 75%;
+            height: 90vh;
+            background-color: white;
+            
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+h1 {
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    font-weight: bolder;
+
+}
+p{
+    position: absolute;
+    bottom: 150px;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.disabled-button {
+    background-color: grey !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+    pointer-events: none;
+
+}
+img{
+    position: absolute;
+}
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: red;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #e62222;
+   }
+   
+   button, button span {
+    transition: 200ms;
+   }
+   
+   button .text {
+    transform: translateX(35px);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+   }
+   
+   button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+   button svg {
+    width: 15px;
+    fill: #eee;
+   }
+   
+   button:hover {
+    background: #ff3636;
+   }
+   
+   button:hover .text {
+    color: transparent;
+   }
+   
+   button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+   }
+   
+   button:focus {
+    outline: none;
+   }
+   
+   button:active .icon svg {
+    transform: scale(0.8);
+   }
+
+   .yesselect {
+    width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background: #00a600;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #00a600;
+  position: absolute;
+  top: 450px;
+  left: 300px;
+   }
+   .yesselect:hover {
+    background: #00a600;
+    visibility: visible;
+
+   }
+   .yesselect .icon {
+    position: absolute;
+    border-left: 1px solid #007300;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .yesselect svg {
+    width: 15px;
+    fill: #eee;}
+   .yesselect:hover .text {
+    color: transparent; 
+}
+.buttonSpan  {
+    color: white;
+  margin: 150px;
+  font-size: 30px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.yesselect:hover .buttonSpan {
+    background: #00a600;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+ 
+  
+.nobuttonSpan  {
+    color: white;
+  margin: 10px;
+  font-size: 15px;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.noselect:hover .nobuttonSpan {
+    background: #ff3636;
+    visibility: visible;
+    opacity: 1;
+}
+
+#noButton {
+    position: absolute;
+    top: 450px;
+}
+
+@keyframes fall {
+    0% { transform: scale(1) translateY(0); opacity: 1; }
+    50% { transform: scale(1.2) translateY(-10px); opacity: 0.8; }
+    100% { transform: scale(1) translateY(-20px); opacity: 0; }
+}
+
+@keyframes falls {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(105vh);
+        opacity: 0; /* Gradually disappears */
+    }
+}
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: fall 2s linear infinite;
+}
+
+.question {
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    animation: fall 2s linear infinite;
+}
+.drop {
+    position: absolute;
+    color: lightblue;
+    font-size: 24px;
+    animation: falls 1s linear infinite;
+}
